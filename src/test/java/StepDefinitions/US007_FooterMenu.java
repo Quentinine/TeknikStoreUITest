@@ -8,6 +8,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class US007_FooterMenu extends GWD {
 
     FooterContent fc = new FooterContent(GWD.getDriver());
@@ -24,6 +27,9 @@ public class US007_FooterMenu extends GWD {
     public void clickYeniUyelik() {
         ParentPage.myClick(fc.yeniUyelikFooter);
 
+        List<String> windows = new ArrayList<>(GWD.getDriver().getWindowHandles());
+        GWD.getDriver().switchTo().window(windows.get(1));
+
     }
 
     @Then("User directs to 'Yeni Üyelik' page.")
@@ -38,6 +44,9 @@ public class US007_FooterMenu extends GWD {
     public void clickUyeGirii() {
         ParentPage.myClick(fc.uyeGirisiFooter);
 
+        List<String> windows = new ArrayList<>(GWD.getDriver().getWindowHandles());
+        GWD.getDriver().switchTo().window(windows.get(1));
+
     }
 
     @Then("User directs to 'Üye Girişi' page.")
@@ -51,6 +60,9 @@ public class US007_FooterMenu extends GWD {
     @And("User clicks 'Şifremi Unuttum'.")
     public void clickSifremiUnuttum() {
         ParentPage.myClick(fc.sifremiUnuttumFooter);
+
+        List<String> windows = new ArrayList<>(GWD.getDriver().getWindowHandles());
+        GWD.getDriver().switchTo().window(windows.get(1));
 
     }
 
