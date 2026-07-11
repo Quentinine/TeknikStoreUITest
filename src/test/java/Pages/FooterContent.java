@@ -95,4 +95,9 @@ public class FooterContent extends ParentPage {
     @FindBy(xpath = "//*[@title='Matkap Uçları']")
     public WebElement matkapUclariFooter;
 
+    // her tıklamanın soundaki testte asıl sayfaya neyle dönmeliyim? given verebilir miyim? En son adım için olan
+    // seyi yazabilecegim bir annotation var mı?(her senaryonunda sonuna bir annot ekleme baştaki url dönme)
+    // mainsteps ok mu?
+    //page isimleriden cıkaramadım nasıl yapabilirim.
+
 }
