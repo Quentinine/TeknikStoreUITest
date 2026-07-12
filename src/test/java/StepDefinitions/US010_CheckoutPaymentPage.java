@@ -15,16 +15,17 @@ public class US010_CheckoutPaymentPage extends GWD {
     DialogContent dc = new DialogContent(getDriver());
     CheckOutPage cp = new CheckOutPage(getDriver());
 
+
     //sepete ekleme kısmını atladım direkt sepetten
 
-    @And("User clicks on 'Alısverisi tamamla.")
+    @And("User clicks on 'Alısverisi tamamla'.")
     public void alisverisiTamamlaButton() {
         //eklenen ürünlerin dogrulugu baska adımda kontrol edilmişti yine de eklemeli miyim?
         ParentPage.myClick(cp.alisverisiTamamlaButton);
 
     }
 
-    @And("User clicks on 'Uye olmadan devam et.")
+    @And("User clicks on 'Uye olmadan devam et'.")
     public void uyeOlmadanDevamEt() {
         ParentPage.myClick(cp.uyeOlmadanDevamEtButton);
 
@@ -77,7 +78,7 @@ public class US010_CheckoutPaymentPage extends GWD {
 
     }
 
-    @And("User clicks 'Ödeme İşlemlei'.")
+    @And("User clicks 'Ödeme İşlemleri'.")
     public void odemeIslemleriClick() {
         ParentPage.myClick(cp.odemeIslemleriButton);
 
