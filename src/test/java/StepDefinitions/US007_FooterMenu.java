@@ -20,7 +20,7 @@ public class US007_FooterMenu extends GWD {
     FooterContent fc = new FooterContent(getDriver());
     WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
-    public static void scrolltoFalse(WebElement element){
+    public static void scrolltoElementFalse(WebElement element){
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView(false);", element);
     }
@@ -29,7 +29,7 @@ public class US007_FooterMenu extends GWD {
     @And("User clicks 'Yeni üyelik' on footer menu.")
     public void clickYeniUyelik() {
 
-        scrolltoFalse(fc.yeniUyelikFooter);
+        scrolltoElementFalse(fc.yeniUyelikFooter);
 
         wait.until(ExpectedConditions.visibilityOf(fc.yeniUyelikFooter));
         MyFunc.myClick(fc.yeniUyelikFooter);
@@ -70,7 +70,7 @@ public class US007_FooterMenu extends GWD {
     // İletişim
     @When("User clicks 'İletişim' on footer menu.")
     public void clickIletisim() {
-        scrolltoFalse(fc.iletisimFooter);
+        scrolltoElementFalse(fc.iletisimFooter);
 
         wait.until(ExpectedConditions.visibilityOf(fc.iletisimFooter));
         MyFunc.myClick(fc.iletisimFooter);
