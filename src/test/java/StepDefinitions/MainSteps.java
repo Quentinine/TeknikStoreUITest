@@ -12,7 +12,7 @@ public class MainSteps {
     }
 
     @Given("User logs into website.")
-    public void loginTOWebsite() {
+    public void loginToWebsite() {
         // login testini yapacak olan kişi bu kısmı doldurabilir.
 
     }

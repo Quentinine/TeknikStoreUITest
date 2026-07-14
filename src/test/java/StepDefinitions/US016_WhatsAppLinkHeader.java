@@ -11,7 +11,7 @@ import org.testng.Assert;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US016_WhatsAppLink extends GWD{
+public class US016_WhatsAppLinkHeader extends GWD{
 
     String phoneNumber;
 
