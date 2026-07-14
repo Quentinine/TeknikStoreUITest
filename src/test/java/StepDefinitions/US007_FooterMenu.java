@@ -20,7 +20,7 @@ public class US007_FooterMenu extends GWD {
     FooterContent fc = new FooterContent(getDriver());
     WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
-    public static void scrollforFooter(WebElement element){
+    public static void scrolltoFalse(WebElement element){
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView(false);", element);
     }
@@ -29,7 +29,7 @@ public class US007_FooterMenu extends GWD {
     @And("User clicks 'Yeni üyelik' on footer menu.")
     public void clickYeniUyelik() {
 
-        scrollforFooter(fc.yeniUyelikFooter);
+        scrolltoFalse(fc.yeniUyelikFooter);
 
         wait.until(ExpectedConditions.visibilityOf(fc.yeniUyelikFooter));
         MyFunc.myClick(fc.yeniUyelikFooter);
@@ -70,7 +70,7 @@ public class US007_FooterMenu extends GWD {
     // İletişim
     @When("User clicks 'İletişim' on footer menu.")
     public void clickIletisim() {
-        scrollforFooter(fc.iletisimFooter);
+        scrolltoFalse(fc.iletisimFooter);
 
         wait.until(ExpectedConditions.visibilityOf(fc.iletisimFooter));
         MyFunc.myClick(fc.iletisimFooter);
@@ -106,7 +106,7 @@ public class US007_FooterMenu extends GWD {
     public void confirmsHavalebildirimFormu() {
         String url = getDriver().getCurrentUrl();
         Assert.assertTrue(url.contains("/havalebildirim-formu"));
-    }
+    } // öncesinde login istiyor login eklenince eklenecek
 
     // Kargo Takibi
     @When("User clicks 'Kargo takibi' on footer menu.")
@@ -144,7 +144,7 @@ public class US007_FooterMenu extends GWD {
     @Then("User directs to 'Gizlilik ve güvenlik' page.")
     public void confirmsGizlilikVeGizlilik() {
         String url = getDriver().getCurrentUrl();
-        Assert.assertTrue(url.contains("/gizlilik-ve-gizlilik"));
+        Assert.assertTrue(url.contains("/gizlilik-ve-guvenlik"));
     }
 
     // İade ve değişim koşulları

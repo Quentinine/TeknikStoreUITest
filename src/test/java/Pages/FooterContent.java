@@ -54,7 +54,7 @@ public class FooterContent extends ParentPage {
     @FindBy(xpath = "//*[@title='Gizlilik ve Güvenlik']")
     public WebElement gizlilikVeGuvenlikFooter;
 
-    @FindBy(xpath = "//*[@title='İptal ve İade Koşulları']")
+    @FindBy(xpath = "//*[@title='İptal ve İade Koşullari']")
     public WebElement iadeVeDegisimFooter;
 
     @FindBy(xpath = "//*[@title='Kişisel Veriler Politikası']")

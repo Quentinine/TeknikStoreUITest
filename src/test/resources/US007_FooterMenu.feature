@@ -37,7 +37,7 @@ Feature: Footer menu objects
 
   Scenario: User successfully opens "Gizlilik ve Güvenlik" url.
     When User clicks 'Gizlilik ve güvenlik' footer menu.
-    Then User directs to 'Mesafeli Satış Sözleşmesi' page.
+    Then User directs to 'Gizlilik ve güvenlik' page.
 
   Scenario: User successfully opens "İade ve Değişim Koşulları" url.
     When User clicks 'İade ve Değişim Koşulları' on footer menu.
