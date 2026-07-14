@@ -54,3 +54,39 @@ Feature: Footer menu objects
   Scenario: User successfully opens "Site Haritası" url.
     When User clicks 'Site Haritası' on footer menu.
     Then User directs to 'Site Haritası' page.
+
+  Scenario: User successfully opens "Safety Jogger" search.
+    When User clicks 'Safety Jogger' on footer page.
+    Then User directs to search page for 'Safety Jogger'.
+
+  Scenario: User successfully opens "Outdoor Ayakkabılar" search.
+    When User clicks 'Outdoor Ayakkabılar' on footer page.
+    Then User directs to search page for 'Outdoor Ayakkabılar'.
+
+  Scenario: User successfully opens "İş Ayakkabıları" search.
+    When User clicks 'İş Ayakkabıları' on footer page.
+    Then User directs to search page for 'İş Ayakkabıları'.
+
+  Scenario: User successfully opens "Bosch Profesyonel" search.
+    When User clicks 'Bosch Profesyonel' on footer page.
+    Then User directs to search page for 'Bosch Profesyonel'.
+
+  Scenario: User successfully opens "Karcher Ürünleri" search.
+    When User clicks 'Karcher Ürünleri' on footer page.
+    Then User directs to search page for 'Karcher Ürünleri'.
+
+  Scenario: User successfully opens "Alüminyum Ürünler" search.
+    When User clicks 'Alüminyum Ürünler' on footer page.
+    Then User directs to search page for 'Alüminyum Ürünler'.
+
+  Scenario: User successfully opens "Teknik Spreyler" search.
+    When User clicks 'Teknik Spreyler' on footer page.
+    Then User directs to search page for 'Teknik Spreyler'.
+
+  Scenario: User successfully opens "Çekic ve Balyozlar" search.
+    When User clicks 'Çekic ve Balyozlar' on footer page.
+    Then User directs to search page for 'Çekic ve Balyozlar'.
+
+  Scenario: User successfully opens "Matkap Uçları" search.
+    When User clicks 'Matkap Uçları' on footer page.
+    Then User directs to search page for 'Matkap Uçları'.

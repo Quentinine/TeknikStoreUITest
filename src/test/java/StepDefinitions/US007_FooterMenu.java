@@ -20,8 +20,8 @@ public class US007_FooterMenu extends GWD {
     FooterContent fc = new FooterContent(getDriver());
     WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
-    public static void scrolltoElementFalse(WebElement element){
-        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
+    public static void scrolltoElementFalse(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView(false);", element);
     }
 
@@ -197,5 +197,131 @@ public class US007_FooterMenu extends GWD {
     public void confirmSiteHaritasi() {
         String url = getDriver().getCurrentUrl();
         Assert.assertTrue(url.contains("/site-haritasi"));
+    }
+
+    //Safety Jogger
+    @And("User clicks 'Safety Jogger' on footer page.")
+    public void clickSafetyJogger() {
+        scrolltoElementFalse(fc.outdoorAyakkabilarFooter);
+        wait.until(ExpectedConditions.visibilityOf(fc.outdoorAyakkabilarFooter));
+        MyFunc.myClick(fc.outdoorAyakkabilarFooter);
+    }
+
+    @Then("User directs to search page for 'Safety Jogger'.")
+    public void confirmsSafetyJoggerPage() {
+        String url = GWD.getDriver().getCurrentUrl();
+        Assert.assertTrue(url.contains("safety-jogger"));
+    }
+
+    //Outdoor Ayakkabılar
+    @And("User clicks 'Outdoor Ayakkabılar' on footer page.")
+    public void clickOutdoorAyakkabilar() {
+        scrolltoElementFalse(fc.outdoorAyakkabilarFooter);
+        wait.until(ExpectedConditions.visibilityOf(fc.outdoorAyakkabilarFooter));
+        MyFunc.myClick(fc.outdoorAyakkabilarFooter);
+    }
+
+    @Then("User directs to search page for 'Outdoor Ayakkabılar'.")
+    public void confirmsOutdoorAyakkabilarPage() {
+        String url = GWD.getDriver().getCurrentUrl();
+        Assert.assertTrue(url.contains("outdoor-ayakkabi"));
+    }
+
+    //İş Ayakkabıları
+    @And("User clicks 'İş Ayakkabıları' on footer page.")
+    public void clickIsAyakkabilari() {
+        scrolltoElementFalse(fc.isAyakkabilariFooter);
+        wait.until(ExpectedConditions.visibilityOf(fc.isAyakkabilariFooter));
+        MyFunc.myClick(fc.isAyakkabilariFooter);
+    }
+
+    @Then("User directs to search page for 'İş Ayakkabıları'.")
+    public void confirmsIsAyakkabilariPage() {
+        String url = GWD.getDriver().getCurrentUrl();
+        Assert.assertTrue(url.contains("is-ayakkabilari"));
+    }
+
+    //Bosch Profesyonel
+    @And("User clicks 'Bosch Profesyonel' on footer page.")
+    public void clickBoschProfesyonel() {
+        scrolltoElementFalse(fc.boschProfesyonelFooter);
+        wait.until(ExpectedConditions.visibilityOf(fc.boschProfesyonelFooter));
+        MyFunc.myClick(fc.boschProfesyonelFooter);
+    }
+
+    @Then("User directs to search page for 'Bosch Profesyonel'.")
+    public void confirmsBoschProfesyonelPage() {
+        String url = GWD.getDriver().getCurrentUrl();
+        Assert.assertTrue(url.contains("bosch"));
+    }
+
+    //Karcher Ürünleri
+    @And("User clicks 'Karcher Ürünleri' on footer page.")
+    public void clickKarcherUrunleri() {
+        scrolltoElementFalse(fc.karcherUrunleriFooter);
+        wait.until(ExpectedConditions.visibilityOf(fc.karcherUrunleriFooter));
+        MyFunc.myClick(fc.karcherUrunleriFooter);
+    }
+
+    @Then("User directs to search page for 'Karcher Ürünleri'.")
+    public void confirmsKarcherUrunleriPage() {
+        String url = GWD.getDriver().getCurrentUrl();
+        Assert.assertTrue(url.contains("karcher"));
+    }
+
+    //Alüminyum Ürünler
+    @And("User clicks 'Alüminyum Ürünler' on footer page.")
+    public void clickAluminyumUrunler() {
+        scrolltoElementFalse(fc.aluminyumUrunlerFooter);
+        wait.until(ExpectedConditions.visibilityOf(fc.aluminyumUrunlerFooter));
+        MyFunc.myClick(fc.aluminyumUrunlerFooter);
+    }
+
+    @Then("User directs to search page for 'Alüminyum Ürünler'.")
+    public void confirmsAluminyumUrunlerPage() {
+        String url = GWD.getDriver().getCurrentUrl();
+        Assert.assertTrue(url.contains("aluminyum-urunler"));
+    }
+
+    //Teknik Spreyler
+    @And("User clicks 'Teknik Spreyler' on footer page.")
+    public void clickTeknikSpreyler() {
+        scrolltoElementFalse(fc.teknikSpreylerFooter);
+        wait.until(ExpectedConditions.visibilityOf(fc.teknikSpreylerFooter));
+        MyFunc.myClick(fc.teknikSpreylerFooter);
+    }
+
+    @Then("User directs to search page for 'Teknik Spreyler'.")
+    public void confirmsTeknikSpreylerPage() {
+        String url = GWD.getDriver().getCurrentUrl();
+        Assert.assertTrue(url.contains("teknik-spreyler"));
+    }
+
+    //Çekic ve Balyozlar
+    @And("User clicks 'Çekic ve Balyozlar' on footer page.")
+    public void clickCekicVeBalyozlar() {
+        scrolltoElementFalse(fc.cekicVeBalyozlarFooter);
+        wait.until(ExpectedConditions.visibilityOf(fc.cekicVeBalyozlarFooter));
+        MyFunc.myClick(fc.cekicVeBalyozlarFooter);
+    }
+
+    @Then("User directs to search page for 'Çekic ve Balyozlar'.")
+    public void confirmsCekicVeBalyozlarPage() {
+        String url = GWD.getDriver().getCurrentUrl();
+        Assert.assertTrue(url.contains("cekic-ve-balyoz"));
+    }
+
+    //Matkap Uçları
+    @And("User clicks 'Matkap Uçları' on footer page.")
+    public void clickMatkapUclari() {
+        scrolltoElementFalse(fc.matkapUclariFooter);
+        wait.until(ExpectedConditions.visibilityOf(fc.matkapUclariFooter));
+        MyFunc.myClick(fc.matkapUclariFooter);
+    }
+
+    @Then("User directs to search page for 'Matkap Uçları'.")
+    public void confirmsMatkapUclariPage() {
+        String url = GWD.getDriver().getCurrentUrl();
+        Assert.assertTrue(url.contains("matkap-uclari"));
     }
 }
