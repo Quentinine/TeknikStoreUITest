@@ -13,42 +13,52 @@ public class DialogContent extends ParentPage{
     }
 
     @FindBy(xpath = "//div[@class='header-whatsapp']/a")
-    public WebElement headerWhatsapp; //header da bulunan WhatsApp butonu
+    public WebElement headerWhatsapp; // header da bulunan WhatsApp butonu
 
     @FindBy(xpath = "//div[@class = 'cart-menu']/a")
-    public WebElement goToCartButton;
+    public WebElement goToCartButton; // sağ üstte bulunan 'sepetim' butonu
 
     @FindBy(xpath = "//div[@class = 'cart-content-button']/a")
-    public WebElement odemeYapButton;
+    public WebElement odemeYapButton; // sepetim butonuna bastıktan sonra cıkan 'ödeme yap butonu'
 
     @FindBy(xpath = "//div[@class = 'cart-panel-buttons form-group']/a")
-    public WebElement alisverisiTamamlaButton;
+    public WebElement alisverisiTamamlaButton; // sepetteki 'alısverişi tamamla' butonu
 
     @FindBy(xpath = "//*[@href= '/order/step2']")
-    public WebElement uyeOlmadanDevamEtButton;
+    public WebElement uyeOlmadanDevamEtButton; // 'alısverişi tamamla' dan sonra gelen 'üye olmadan devam et butonu'
 
     @FindBy(css = "#email")
-    public WebElement email;
+    public WebElement email; // order/step2
 
     @FindBy(css = "#firstname")
-    public WebElement firstName;
+    public WebElement firstName; // order/step2
 
     @FindBy(css = "#surname")
-    public WebElement surname;
+    public WebElement surname; // order/step2
 
     @FindBy(css = "#shippingLocation")
-    public WebElement selectTown;
+    public WebElement selectTown; // order/step2
 
     @FindBy(css = "#shippingSubLocation")
-    public WebElement selectIlce;
+    public WebElement selectIlce; // order/step2
 
     @FindBy(css = "#mobilePhoneNumber")
-    public WebElement phoneNumber;
+    public WebElement phoneNumber; // order/step2
 
     @FindBy(css = "#address")
-    public WebElement address;
+    public WebElement address; // order/step2
 
     @FindBy(xpath = "//*[@class = 'btn btn-block btn-primary']")
-    public WebElement odemeIslemleriButton;
+    public WebElement odemeIslemleriButton; // order/step2
+
+    //https://www.teknikstore.com/uye-girisi?membership=1
+    @FindBy(css = "#user-login-email")
+    public WebElement uyeGirisiEmail; // üye girişi ekranı email
+
+    @FindBy(css = "user-login-pass")
+    public WebElement uyeGirisiPass;
+
+    @FindBy(css = ".btn.btn-primary.btn-block")
+    public WebElement girisyapButton;
 
 }

@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import Pages.DialogContent;
 import Pages.FooterContent;
 import Pages.ParentPage;
 import Utilities.GWD;
@@ -18,6 +19,7 @@ import java.time.Duration;
 public class US007_FooterMenu extends GWD {
 
     FooterContent fc = new FooterContent(getDriver());
+    DialogContent dc = new DialogContent(getDriver());
     WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
     public static void scrolltoElementFalse(WebElement element) {
@@ -100,12 +102,21 @@ public class US007_FooterMenu extends GWD {
     public void clickHavalebildirimFormu() {
         wait.until(ExpectedConditions.visibilityOf(fc.havaleBildirimFooter));
         ParentPage.myClick(fc.havaleBildirimFooter);
+
+    }
+
+    @And("User logs in to website.")
+    public void logsIntoWebsite() {
+        dc.uyeGirisiEmail.sendKeys("robiv72898@suahi.com");
+        dc.uyeGirisiPass.sendKeys("Gamze123!");
+        MyFunc.myClick(dc.girisyapButton);
+
     }
 
     @Then("User directs to 'Havale Bildirim Formu' page.")
     public void confirmsHavalebildirimFormu() {
         String url = getDriver().getCurrentUrl();
-        Assert.assertTrue(url.contains("/havalebildirim-formu"));
+        Assert.assertTrue(url.contains("/havale-bildirim"));
     } // öncesinde login istiyor login eklenince eklenecek
 
     // Kargo Takibi

@@ -11,9 +11,4 @@ public class MainSteps {
         GWD.getDriver().get("https://www.teknikstore.com/");
     }
 
-    @Given("User logs into website.")
-    public void loginToWebsite() {
-        // login testini yapacak olan kişi bu kısmı doldurabilir.
-
-    }
 }

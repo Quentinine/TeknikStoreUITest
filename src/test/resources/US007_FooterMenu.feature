@@ -3,6 +3,13 @@ Feature: Footer menu objects
   Background:
     Given User opens the website.
 
+  Scenario: User can see the contact buttons
+    When User scrolls down
+    Then User can see 'phone' button.
+    And User can see 'WhatsApp' button.
+    And User can see 'e-mail' button.
+    And User can see 'address' button.
+
   Scenario: User successfully opens "Yeni Üyelik" url.
     When User clicks 'Yeni üyelik' on footer menu.
     Then User directs to 'Yeni Üyelik' page.
@@ -25,6 +32,7 @@ Feature: Footer menu objects
 
   Scenario: User successfully opens "Havale Bildirim Formu" url.
     When User clicks 'Havale Bildirim Formu' on footer menu.
+    And User logs in to website.
     Then User directs to 'Havale Bildirim Formu' page.
 
   Scenario: User successfully opens "Kargo Takibi" url.
