@@ -6,6 +6,7 @@ import Pages.ParentPage;
 import Utilities.GWD;
 import Utilities.MyFunc;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.JavascriptExecutor;
@@ -25,6 +26,36 @@ public class US007_FooterMenu extends GWD {
     public static void scrolltoElementFalse(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView(false);", element);
+    }
+
+    @Given("User opens the website.")
+    public void openWebsite() {
+        GWD.getDriver().get("https://www.teknikstore.com/");
+    }
+
+    //İletişim sembolleri görünür mü?
+    @Then("User can see 'phone' button.")
+    public void userCanSeePhoneButton() {
+        Assert.assertTrue(fc.phoneFooter.isDisplayed());
+
+    }
+
+    @And("User can see 'WhatsApp' button.")
+    public void userCanSeeWhatsAppButton() {
+        Assert.assertTrue(fc.whatsappContactFooter.isDisplayed());
+
+    }
+
+    @And("User can see 'e-mail' button.")
+    public void userCanSeeEmailButton() {
+        Assert.assertTrue(fc.mailFooter.isDisplayed());
+
+    }
+
+    @And("User can see 'address' button.")
+    public void userCanSeeAddressButton() {
+        Assert.assertTrue(fc.addressFooter.isDisplayed());
+
     }
 
     // Yeni uyelik
